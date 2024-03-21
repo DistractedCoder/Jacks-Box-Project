@@ -205,6 +205,8 @@ if __name__ == '__main__':
         address = ip_address
     
     #update secret data from /templates/js/
+    if not os.path.exists("static/js/"):
+        os.makedirs("static/js/")
     secretfile=open("static/js/secret.js","w")
     secretfile.write('address = "' + address + '";port = "' + str(port) + '";')
     secretfile.close()
