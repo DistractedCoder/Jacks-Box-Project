@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Webpage</title>
+
+    <script src="/static/js/secret.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .noInput {
+            background-color:coral;
+        }
+        .waitInput {
+            background-color:aquamarine;
+        }
+        .hidden {
+            display: none;
+        }
+        /* .show {
+            display: inline-block;
+        } */
+    </style>
+</head>
+<body class="noInput">
+    <form id="messageForm" class="hidden">
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="message">Enter Message:</label>
+        <input type="text" id="message" name="message">
+
+        <button type="button" onclick="sendMessage()">Submit</button>
+    </form>
+
+    <div id="responseContainer"></div>
+
+    <script>
+        var url = address + ":" + port;
+        var socket = new WebSocket('ws://' + url + '/websocket');
+
+
+        // Handle server-initiated color changes
+        socket.onmessage = function(event) {
+            var data = event.data.split(";");
+            // if (data.type === 'update_color') {
+            //     var newColor = data.color;
+            //     document.body.style.backgroundColor = newColor;
+            // } else if (data.type === 'response') {
+            //     var responseContainer = document.getElementById('responseContainer');
+            //     responseContainer.innerHTML = 'Server Response: ' + data.message;
+            // }
+            if (data[0] == "python_02_requestmessage")
+            {
+                $("#messageForm").toggleClass("hidden");
+                $("body").removeClass("noInput");
+                $("body").addClass("waitInput");
+            }
+        };
+
+        function sendMessage() {
+            //check not nulls
+            //website is responsibe for data validation
+
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
+            // var data = {
+            //     type: 'message',
+            //     name: name,
+            //     message: message
+            // };
+            //socket.send(JSON.stringify(data));
+            socket.send("phone_03_sendmessage;" + name + ";" + message);
+            document.getElementById('message').value = '';
+
+            $("#messageForm").toggleClass("hidden");
+            $("body").removeClass("waitInput");
+            $("body").addClass("noInput");
+        }
+    </script>
+</body>
+</html>

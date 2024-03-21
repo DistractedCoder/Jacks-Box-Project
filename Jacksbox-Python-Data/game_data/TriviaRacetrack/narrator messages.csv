@@ -1,0 +1,94 @@
+﻿file name,message
+intro-1,"Welcome to Trivia Racetrack! I am Buzz Maverick, your host. Different animals, one goal: conquer the quiz. It's not about speed; it's about chaining those correct answers. Let the Trivia Racetrack thrill begin!"
+intro-2,"Welcome to Trivia Racetrack! I am Buzz Maverick. Animals, trivia, and bonus points, no need for speed, just consecutive correct answers. Let the race to victory begin!"
+intro-3,"
+Welcome to Trivia Racetrack! I am Buzz Maverick. Animals, brainpower, and bonus points, no need for speed, just consecutive correct answers. Let the race begin!"
+intro-4,"Welcome to Trivia Racetrack! I am Buzz Maverick, your host. Animals, brains, and bonus points, no speed required, just consecutive correct answers. Let the race commence!"
+intro-5,"Welcome to the electrifying Trivia Racetrack! I am Buzz Maverick, your host for this animal-themed showdown. Remember, speed isn't the essence here; it's all about consecutive correct answers for those bonus points. Let the race begin!"
+intro-6,"Welcome Ladies and gentlemen! I am your host, Buzz Maverick. Here's the catch: no need to be the fastest; it's all about chaining those correct answers for extra points. Get ready for a sprint towards triumph in the Trivia Racetrack!"
+intro-7,"Welcome, ladies and gentlemen! I am your animated host, Buzz Maverick, and today promises a riveting competition. Our participants? Not your standard trivia wizards; They're animals! Get ready Trivia Racetrack!"
+intro-8,"Welcome to Trivia Racetrack! I am Buzz Maverick, your host. Brace yourself for a unique competition where diverse contestants engage in a strategic battle of wits. Let the excitement begin!"
+intro-9,"Welcome to Trivia Racetrack! I am Buzz Maverick, and today's diverse contestants are set for a strategic battle of wits. Let the excitement unfold!"
+intro-10,"Welcome to Trivia Racetrack! I am Buzz Maverick, your host. Get ready for a diverse lineup of contestants engaging in a strategic battle of wits. Let the excitement kick in!"
+intro-bacteria,"Ladies and gentlemen, welcome to Trivia Racetrack! I am your lively host, Buzz Maverick, and we've got an extraordinary lineup today. Among our contestants, we have a diverse mix of animals and even a single bacteria in the mix! It's not just a race; it's a cerebral showdown where brains trump speed. String together those correct answers for bonus points, and let the excitement of Trivia Racetrack unfold!"
+intro-dinosaur,"Welcome, trivia enthusiasts, to the extraordinary Trivia Racetrack! I am Buzz Maverick, your enthusiastic host. Today's lineup features a diverse cast, including a real-life dinosaur! In this unique competition, it's all about brains, not speed. Keep those correct answers coming for bonus points as we witness the jaw-dropping Trivia Racetrack unfold with the awe-inspiring presence of a genuine dinosaur!"
+intro-stump,"Greetings, trivia aficionados! Welcome to the intriguing Trivia Racetrack! I am Buzz Maverick, your lively host. Among our contestants is a surprising contender – a literal tree stump! In this unconventional competition, it's about flexing your brainpower, not speed. Rack up those correct answers for bonus points as we delve into the captivating world of Trivia Racetrack, featuring the unexpected presence of a genuine tree stump!"
+intro-rock,"Welcome, quiz enthusiasts, to the enigmatic Trivia Racetrack! I am Buzz Maverick, your animated host. Today, our lineup features a truly unique contestant – a mere rock! In this cerebral competition, it's all about strategic thinking, not speed. Gather those correct answers for bonus points as we embark on the extraordinary journey of Trivia Racetrack, with the unconventional presence of a genuine rock!"
+intro-sun,"Ladies and gentlemen, prepare for an astronomical edition of Trivia Racetrack! I am Buzz Maverick, your cosmic host. Among our contestants today is none other than the mighty sun itself! In this mind-bending competition, it's not about speed but rather the brilliance of correct answers. Soak in the cosmic knowledge and watch the Trivia Racetrack unfold with the radiant presence of our celestial contender, the sun!"
+intro-moon,"Welcome, trivia enthusiasts, to the celestial spectacle of Trivia Racetrack! I am Buzz Maverick, your cosmic guide. Today, in our stellar lineup, we have the enchanting moon as one of our contestants! In this celestial competition, it's not about speed but the lunar wisdom of consecutive correct answers. Join us as we orbit through the questions and witness the mesmerizing Trivia Racetrack, featuring the radiant presence of our celestial friend, the moon!"
+score-1,Checking the leaderboard for the latest scores!
+score-2,"Score update, let's see who's in the lead!"
+score-3,Quick standings check: who's ahead in Trivia Racetrack?
+score-4,Time for a score check in our knowledge showdown.
+score-5,Curious about scores? Here's a quick update!
+score-6,Let's see the scores!
+score-7,Let's see the scores!
+score-8,Let's check out the scores!
+score-9,Who's winning? A fast peek at the scores!
+score-10,Here's the current lineup!
+nextquestion-1,"Get ready, folks! Here comes the next brain-bender!"
+nextquestion-2,"Hold on tight, it's question time!"
+nextquestion-3,"Brace yourselves for the next challenge, question incoming!"
+nextquestion-4,Next question!
+nextquestion-5,Next question!
+nextquestion-6,Next question!
+nextquestion-7,Next question!
+nextquestion-8,Next question!
+nextquestion-9,Next question!
+nextquestion-10,Ready? Next question!
+nextquestion-11,Ready? Next question!
+nextquestion-12,"Moving on, "
+nextquestion-13,"Moving on, "
+nextquestion-14,Here's the next question!
+nextquestion-15,Here's the next question!
+answer-1,The answer is reveald
+answer-2,The answer is revealed!
+answer-3,The answer is revealed!
+answer-4,"Time to unveil the answer, folks!"
+answer-5,"Let's put an end to the suspense, the answer is"
+answer-6,The answer is!
+answer-7,The answer is!
+answer-8,The answer is!
+answer-9,The answer is!
+answer-10,The answer is!
+answer-11,Here's the answer!
+answer-12,Here's the answer!
+answer-13,Here's the answer!
+answer-14,Here's the answer!
+answer-15,Here's the answer!
+losercallout-1,"Hey {0}, don't worry, the next question is your moment to shine!"
+losercallout-2,"Sending some positive vibes to {0}, keep going, you've got this!"
+losercallout-3,"Hey {0}, don't lose heart! You will get one right eventually."
+losercallout-4,"Looks like {0} is struggling a bit, time to step up the game!"
+losercallout-5,"Come on, {0}, we need some correct answers in the mix!"
+losercallout-6,Let's hope {0} turns the tide soon; the correct answers are slipping away!
+losercallout-7,"You're not quite hitting the mark, {0}."
+losercallout-8,"It's a tough round for {0}, let's see if they can turn it around!"
+losercallout-9,"{0}, we need some correct answers on your scoreboard!"
+losercallout-10,"{0}, feeling the challenge? Time to break the pattern!"
+losercallout-11,"Pressure's on, {0}! Let's see those correct answers!"
+losercallout-12,"{0}, it's time to shake things up, accuracy is the name of the game!"
+losercallout-13,"Reminder {0}, you want to get the answers correct!"
+loseritem-1,"Looks like we've got a game-changer, folks! To spice things up and level the playing field, our current underdog is receiving an exciting boost, a shiny red balloon! Let's watch as this balloon transforms the trivia landscape, popping one option off the screen for a thrilling twist!"
+loseritem-2,"In the spirit of surprises, our trailing contestant, is about to receive a special gift to rev up their trivia game. Brace yourselves for a twist as this present eliminates one option from your voting screen. Let's see if this unexpected boost turns the tables in the Trivia Racetrack!"
+loseritem-3,"Time to rev up the excitement! A lucky contestant is receiving a game-changing scooter, set to zoom through the trivia lanes. Watch closely as this sleek addition ditches one answer option, injecting a burst of speed and strategy into the Trivia Racetrack!"
+loseritem-4,"Revving up the trivia thrill, a game-changing motorcycle is in play! Our fortunate contestant is about to experience a turbo-charged twist, as this motorcycle speeds through the answers, removing one option and injecting a dash of excitement into the Trivia Racetrack!"
+loseritem-5,"Get ready for a windfall of excitement! A fortunate contestant is about to receive a bag of money, and with it comes a thrilling twist. This unexpected bounty allows them to cash in on a strategic move, removing one answer option and potentially steering their way to success in the Trivia Racetrack!"
+loseritem-6,"Looks like we're giving a boost to our trailing contestant! They've just grabbed a skateboard to kick up the competition. With a quick roll, this skateboard removes one answer option, giving our player in last a chance to skate back into contention in the Trivia Racetrack. Will this be the game-changer they need?"
+loseritem-7,"Time for a cozy twist in the Trivia Racetrack! Our current underdog is slipping into a new pair of socks for a fresh start. With each snug step, they get to eliminate one answer option, injecting a bit of comfort and strategy into the game. Let's see if these lucky socks lead to a trivia turnaround!"
+loseritem-8,"Buckle up for a cosmic twist! Our trailing contestant is about to soar to new heights with a rocket ship. This stellar addition allows them to launch through the trivia options, eliminating one and propelling themselves into a whole new level of competition in the Trivia Racetrack. Ready for liftoff?"
+loseritem-9,"Get ready to twirl into a twist of flavor! Our current underdog is receiving a plate of spaghetti, and with each delicious bite, they get to slurp away one answer option. It's time to savor the strategic advantage and see if this culinary twist brings a new flavor of success to the Trivia Racetrack!"
+loseritem-10,"Adding a touch of adrenaline to the Trivia Racetrack! Our trailing contestant is now being chased by a clown, and with each heart-pounding step, they get to out run one answer option. Will the thrill of the chase be the key to turning the tables in this round of Trivia Racetrack?"
+loseritem-11,"Prepare for a scientific twist! Our trailing contestant is handed a test tube filled with mystery substance. With each strategic move, they can remove one answer option, experimenting their way to a potential comeback in the Trivia Racetrack. Let's see if this concoction leads to a formula for success!"
+loseritem-12,"Time for a magnetic twist in the Trivia Racetrack! Our last place contestant is now equipped with a powerful magnet, pulling in a strategic advantage. With each magnetic move, they can attract and eliminate one answer option. Will this magnetic force be the key to attracting success in the game?"
+loseritem-13,"Watch out, folks! Our trailing contestant just got a pair of scissors for a strategic trim of the competition. Remember, while running with scissors may not be advisable in real life, in the Trivia Racetrack, it's the cutting-edge strategy for success! Let's see if they can snip away the competition and come out on top!"
+outro-1,"Ladies and gentlemen, a big thank you for joining us in the exhilarating Trivia Racetrack! We appreciate your enthusiasm and wit throughout the game. A round of applause for our fantastic participants, you made this race truly memorable. Whether you're considering another lap around the track or heading off to conquer new challenges, I am Buzz Maverick, signing off and wishing you a fantastic day ahead. Until next time, keep those brains revved up!"
+outro-2,"Thank you all for joining the thrilling Trivia Racetrack! A round of applause for our fantastic participants. Whether you're gearing up for a rematch or embarking on new adventures, this is Buzz Maverick signing off. Until next time, keep those brains buzzing!"
+outro-3,"A big thanks to everyone for being part of the Trivia Racetrack excitement! A round of applause for our participants. Whether you're ready for a rematch or venturing into new challenges, this is Buzz Maverick signing off. Until next time, stay sharp and enjoy the journey!"
+outro-4,"Thanks for joining the Trivia Racetrack! Big applause for our participants. Whether you're up for a rematch or off to new adventures, I am Buzz Maverick signing off. Until next time, keep the trivia vibes alive!"
+outro-5,"Thanks for racing through the Trivia track with us! A round of applause for our participants – you've been a-wheely awesome crowd. Whether you're revving up for a rematch or speeding off to new adventures, this is Buzz Maverick, reminding you: why did the trivia player bring a ladder? Because they wanted to reach for the stars! Until next time, keep climbing and laughing!"
+outro-6,"Big thanks for joining the Trivia Racetrack fun! Let's give a virtual high-five to our participants – you've been quizzically amazing. Whether you're revving up for another lap or zooming off to new endeavors, this is Buzz Maverick, signing off with a parting pun: Why don't scientists trust atoms? Because they make up everything! Until our next trivia rendezvous, stay curious and keep the laughter rolling!"
+outro-7,"Thanks for racing through Trivia Racetrack! A huge shoutout to our awesome participants. Whether you're gearing up for a rematch or racing into new adventures, this is Buzz Maverick, signing off with a trivia tip: Why don't skeletons fight each other? They don't have the guts! Until next time, stay sharp and keep smiling!"
+outro-8,"Thanks for being part of Trivia Racetrack! Whether you're up for a rematch or heading off to conquer new challenges, this is Buzz Maverick signing off. Until next time, keep those brains buzzing!"
+outro-9,"A special shoutout to the brilliant mind behind Trivia Racetrack, the one and only Distracted Coder! Thanks for creating this exciting journey of wit and knowledge. To our participants and viewers, until we meet again, this is Buzz Maverick, signing off. I will catch you guys next time! audeeose!"
+intro-dragon,"Ladies and gentlemen, welcome to a fantastical edition of Trivia Racetrack! I am Buzz Maverick, your spirited host, and today, brace yourselves for a mythical twist—among our contestants is a bona fide dragon! Get ready for a blaze of knowledge and a fiery competition as we dive into the enchanting world of Trivia Racetrack!"

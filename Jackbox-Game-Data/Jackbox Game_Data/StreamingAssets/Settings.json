@@ -1,0 +1,18 @@
+{
+"ServerSettings": {
+	"Data": {
+		"Comment": "Change address below from x.x.x.x to your ip address if the automatic ip collection fails in unity",
+		"Address": "x.x.x.x",
+		"Port": 80,
+		"DontDisplayIpAddress": false,
+		"PythonPiperExecutablePath": "unused - but dont remove"
+	}
+},
+"TriviaRacetrack": {
+	"Data": {
+		"TotalQuestions": 15,
+		"QuestionsBeforeLoserBonus": 10,
+		"ShowScoresEveryXQuestions": 5
+	}
+}
+}

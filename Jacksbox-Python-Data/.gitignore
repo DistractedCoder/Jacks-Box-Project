@@ -1,0 +1,26 @@
+#ignore everything in all subfolders
+**/*.*
+
+#include everything
+!**/*.*
+
+#exlcude piper/emoji backup
+**/piper/*
+**/emoji/*
+
+# Ignore specific test files
+chat-gpt test.py
+concate files.py
+find dups.py
+image grabber-old.py
+image grabber.py
+longest trivia.py
+processAllAudioLines.py
+question processing.py
+remove all tax questions.py
+server-old-chat-test.py
+show questions.py
+special char finder.py
+text to speech test.py
+
+**/secret.js

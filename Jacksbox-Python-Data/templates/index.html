@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Jack's Box</title>
+
+    <script src="/static/js/secret.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'MinyaNouvelleRegular';
+            src: url('/static/fonts/minya-nouvelle.regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Bold Font */
+        @font-face {
+            font-family: 'MinyaNouvelleBold';
+            src: url('/static/fonts/minya-nouvelle.bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .trivia-racetrack-font {
+            font-family: "MinyaNouvelleRegular", "Nunito", sans-serif;
+        }
+
+        .trivia-racetrack-font b {
+            font-family: "MinyaNouvelleBold", "Nunito", sans-serif;
+        }
+
+        html {
+            padding: 0;
+            font-family: 'Nunito',
+                'Noto Color Emoji',
+                sans-serif;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0px;
+            padding-bottom: 15px;
+            /* overflow: hidden; */
+            height: 100%;
+        }
+
+        #root-background {
+            position: fixed;
+            left: 0;
+            top: 0;
+            margin: 0;
+            background-color: rgb(255, 153, 27);
+            height: 100%;
+            width: 100%;
+            z-index: -999;
+        }
+
+        #login-logo-img {
+            width: 50%;
+            margin-top: 25px;
+        }
+
+        #generic-name-header {
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            padding: 15px 5px;
+            padding-bottom: 5px;
+            box-sizing: border-box;
+            background-color: gold;
+            font-size: 18px;
+        }
+
+        #generic-name-header-emoji {
+            background-color: clear;
+            font-size: 26px;
+            line-height: 00px;
+            padding-left: 5px;
+        }
+
+        .content-fitter-width {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 2px;
+            box-sizing: border-box;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            /* outline: 1px solid black; */
+            height: calc(100% - 70px);
+            max-height: 500px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+
+        input[type=text] {
+            font-size: 22px;
+            margin-bottom: 7px;
+        }
+
+        button {
+            background-color: rgb(72, 72, 255);
+            border-color: blue;
+            border-radius: 25px;
+            border-width: 3px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Nunito',
+                'Noto Color Emoji',
+                sans-serif;
+        }
+
+        #login-char-counter {
+            float: right;
+        }
+
+        login-char-counter::after {
+            clear: both;
+        }
+
+        label {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        footer {
+            width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+            background-color: gold;
+            text-align: center;
+            font-size: 10px;
+            line-height: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+
+        #trivia-racetrack-answer-voting {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+
+        .trivia-flex-item {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            padding: 8px;
+            padding-right: 10px;
+            box-sizing: border-box;
+            flex: 1 0 calc(25% - 8px);
+        }
+
+        .trivia-flex-item-ticket {
+            width: 100%;
+            height: 100%;
+            border: 20px solid gainsboro;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -5;
+        }
+
+        .ticket-A {
+            border-image: url("/static/img/ticket-vector-A.png") 25;
+            border-image-slice: 25 fill;
+        }
+
+        .ticket-B {
+            border-image: url("/static/img/ticket-vector-B.png") 25;
+            border-image-slice: 25 fill;
+        }
+
+        .ticket-C {
+            border-image: url("/static/img/ticket-vector-C.png") 25;
+            border-image-slice: 25 fill;
+        }
+
+        .ticket-D {
+            border-image: url("/static/img/ticket-vector-D.png") 25;
+            border-image-slice: 25 fill;
+        }
+
+        /* .trivia-flex-item:hover,
+        .trivia-flex-item:active {
+            background-color: rgb(0, 111, 148);
+        } */
+
+        .trivia-flex-item-letter {
+            /* background-color: rgba(128, 255, 0, 0.284); */
+            align-self: center;
+            font-size: 48px;
+            padding-right: 10px;
+        }
+
+        .strikethrough {
+            text-decoration: line-through;
+            text-decoration-thickness: 3px;
+        }
+
+        .trivia-font-char12 {
+            font-size: 40px;
+        }
+
+        .trivia-font-char25 {
+            font-size: 27px;
+        }
+
+        .trivia-font-char50 {
+            font-size: 18px;
+        }
+
+        .trivia-font-char75 {
+            font-size: 16px;
+        }
+
+        .trivia-font-char100 {
+            font-size: 14px;
+        }
+
+        .trivia-font-char150 {
+            font-size: 12px;
+        }
+
+        .trivia-font-char150Plus {
+            font-size: 10px;
+        }
+
+        #generic-waiting-page,
+        #generic-waiting-page section {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #generic-waiting-page img {
+            width: 80%;
+        }
+
+        /* .show {
+            display: inline-block;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="root-background"> </div>
+
+    <div id="generic-name-header" style="display: none;">
+        <b>
+            <span id="generic-name-text">{Name here}</span>
+        </b>
+        <span id="generic-name-header-emoji"></span>
+    </div>
+
+    <!--debugging-->
+    <!-- <div id="message"></div> -->
+
+    <div class="content-fitter-width">
+
+        <!-- Error Page -->
+        <div id="generic-error-page" style="display:none">
+            <div class="center">
+                <h2>Error:</h2>
+                <div id="generic-error-field"></div>
+            </div>
+        </div>
+        <!-- END Error Page -->
+
+
+        <!-- Login Page DEFAULT -->
+        <div id="generic-login-page">
+            <div class="center">
+                <img id="login-logo-img" src="/static/img/jacks-box-logo.png">
+            </div>
+
+            <div style="display: table-row;">
+                <label for="name">Enter Your Name:</label><span id="login-char-counter">0/10</span>
+                <br>
+                <input autocomplete="off" autocorrect="off" spellcheck="false" type="text" id="login-name" name="name" oninput="CountCharactersLogin(10)">
+                <br>
+                <button type="button" onclick="SubmitLoginName()">Submit</button>
+            </div>
+
+            <p>Use your <b>real name</b>. It'll be more fun!</p>
+            <p>You cannot change your name after it's been submitted. Just deal with it.</p>
+
+        </div>
+        <!-- END Login Page -->
+
+
+        <!-- Waiting Page -->
+        <div id="generic-waiting-page" style="display: none;">
+            <section id="TriviaRacetrack">
+                <div id="TriviaRacetrack-selected-answer-text"></div>
+                <img src="/static/img/trivia-racetrack-logo.png">
+                <button id="TriviaRacetrack-skip-into" style="display: none; margin-top: 15px;" onclick="SkipIntro()">Start Game OR Skip Intro</button>
+            </section>
+        </div>
+        <!-- END Waiting Page -->
+
+
+        <!-- Game-Trivia Racetrack Answers -->
+        <div id="trivia-racetrack-answer-voting" class="trivia-racetrack-font" style="display: none">
+            <div class="trivia-flex-item" onclick="TriviaRacetrackAnsSubmit(0)">
+                <div class="trivia-flex-item-ticket ticket-A"></div>
+                <div class="trivia-flex-item-letter">A</div>
+                <div class="trivia-flex-item-answer" id="trivia-racetrack-ans-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nobis cum iure tenetur dicta moll</div>
+            </div>
+            <div class="trivia-flex-item" onclick="TriviaRacetrackAnsSubmit(1)">
+                <div class="trivia-flex-item-ticket ticket-B"></div>
+                <div class="trivia-flex-item-letter">B</div>
+                <div class="trivia-flex-item-answer" id="trivia-racetrack-ans-2">Lorem ddffffdd dfdf df asddda ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nobis cum iure tenetur dicta mollLorem ipsum dolor sit ame</div>
+            </div>
+            <div class="trivia-flex-item" onclick="TriviaRacetrackAnsSubmit(2)">
+                <div class="trivia-flex-item-ticket ticket-C"></div>
+                <div class="trivia-flex-item-letter">C</div>
+                <div class="trivia-flex-item-answer" id="trivia-racetrack-ans-3">Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+            </div>
+            <div class="trivia-flex-item" onclick="TriviaRacetrackAnsSubmit(3)">
+                <div class="trivia-flex-item-ticket ticket-D"></div>
+                <div class="trivia-flex-item-letter">D</div>
+                <div class="trivia-flex-item-answer" id="trivia-racetrack-ans-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ea eveniet e</div>
+            </div>
+        </div>
+        <!-- END Game-Trivia Racetrack Answers -->
+
+
+
+
+
+
+
+
+        <script>
+            var url = address + ":" + port;
+            var socket = new WebSocket('ws://' + url + '/websocket');
+            var currentSessionName = "";
+            var currentSessionValid = false;
+            var currentGame = "";
+
+
+            // Handle incoming messages
+            socket.onmessage = function (event) {
+                var data = event.data.split(";");
+
+                //$("#message").append('<p>' + data + '</p>');
+
+                if (data[0] == "unity_confirmation_login") {
+                    if (data[1] == currentSessionName) {
+                        currentSessionValid = true;
+                        currentGame = data[2];
+                        if (data[3].toLowerCase() == "true") //you are first player
+                        {
+                            //start game button not intro
+                            $("#TriviaRacetrack-skip-into").show()
+                        }
+                    }
+                }
+
+                if (currentSessionValid) {
+
+                    //reset screen if called for or if server sent a question to unity
+                    //bit of a hack
+                    if (data[0] == "unity_reset_to_waiting" || data[0] == "python_03_send_question") {
+                        ResetToWaitingScreen();
+                        $("#TriviaRacetrack-skip-into").hide()
+                    }
+
+                    
+                    if (data[0] == "unity_reload_webpage") {
+                        location.reload();
+                        return;
+                    }
+
+                    if (data[0] == "unity_04_send_answers") {
+
+                        //update font sizes
+
+                        $('#trivia-racetrack-answer-voting').show();
+                        $("#generic-waiting-page").hide();
+
+                        $("#trivia-racetrack-ans-1").removeClass("strikethrough trivia-font-char12 trivia-font-char25 trivia-font-char50 trivia-font-char75 trivia-font-char100 trivia-font-char150 trivia-font-char150Plus");
+                        $("#trivia-racetrack-ans-2").removeClass("strikethrough trivia-font-char12 trivia-font-char25 trivia-font-char50 trivia-font-char75 trivia-font-char100 trivia-font-char150 trivia-font-char150Plus");
+                        $("#trivia-racetrack-ans-3").removeClass("strikethrough trivia-font-char12 trivia-font-char25 trivia-font-char50 trivia-font-char75 trivia-font-char100 trivia-font-char150 trivia-font-char150Plus");
+                        $("#trivia-racetrack-ans-4").removeClass("strikethrough trivia-font-char12 trivia-font-char25 trivia-font-char50 trivia-font-char75 trivia-font-char100 trivia-font-char150 trivia-font-char150Plus");
+
+                        $("#trivia-racetrack-ans-1").html(data[1]);
+                        $("#trivia-racetrack-ans-2").html(data[2]);
+                        $("#trivia-racetrack-ans-3").html(data[3]);
+                        $("#trivia-racetrack-ans-4").html(data[4]);
+
+                        $("#trivia-racetrack-ans-1").addClass(TicketGetFontSizeClass(data[1].length));
+                        $("#trivia-racetrack-ans-2").addClass(TicketGetFontSizeClass(data[2].length));
+                        $("#trivia-racetrack-ans-3").addClass(TicketGetFontSizeClass(data[3].length));
+                        $("#trivia-racetrack-ans-4").addClass(TicketGetFontSizeClass(data[4].length));
+
+                        $("#generic-name-header-emoji").html("");
+
+                        if (currentSessionName == data[5]) // this player is loser
+                        {
+                            $("#generic-name-header-emoji").html(ReturnTriviaRacetrackLoserEmoji(data[7]));
+
+                            switch (data[6]) {
+                                case "0":
+                                    $("#trivia-racetrack-ans-1").addClass("strikethrough");
+                                    break;
+                                case "1":
+                                    $("#trivia-racetrack-ans-2").addClass("strikethrough");
+                                    break;
+                                case "2":
+                                    $("#trivia-racetrack-ans-3").addClass("strikethrough");
+                                    break;
+                                case "3":
+                                    $("#trivia-racetrack-ans-4").addClass("strikethrough");
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+
+                }
+
+                //handle errors
+                if (data[0] == 'unity_error') {
+                    if (currentSessionValid == false) {
+                        if (data[1] == currentSessionName) {
+                            $("#generic-login-page").hide();
+                            $("#generic-waiting-page").hide();
+                            $('#generic-error-page').show();
+                            switch (data[2]) {
+                                case "no_new_players":
+                                    $("#generic-error-field").append("<p>Game is not currently accepting new players at this time.</p>")
+                                    $("#generic-error-field").append("<p>Please wait for the current round to end.</p>")
+                                    $("#generic-error-field").append("<br><p>Reload this page to go back to the login screen.</p>")
+                                    break;
+                                case "duplicate_name":
+                                    $("#generic-error-field").append("<p>Name is already in use by someone else.</p>")
+                                    $("#generic-error-field").append("<p>Please update your name.</p>")
+                                    $("#generic-error-field").append("<br><p>Reload this page to go back to the login screen.</p>")
+                                    break;
+                                default:
+                                    $("#generic-error-field").append("<p>Game reported an unknown error {" + data[2] + "}</p>")
+                                    $("#generic-error-field").append("<br><p>Reload this page to go back to the login screen.</p>")
+                                    break;
+                            }
+                        }
+                    }
+                }
+            };
+
+            function SkipIntro() {
+                socket.send("phone_skip_intro");
+            }
+
+            function SubmitLoginName() {
+                //website is responsibe for data validation
+                //validate first to avoid checking not null then removing invalid chars
+
+                //validate length
+
+                var name = StringValidator($('#login-name').val());
+                $('#login-name').val(name);
+
+
+                if (name.length != 0) {
+                    //.toUpperCase()
+                    $('#generic-name-text').html(name);
+                    socket.send("phone_00_login;" + name);
+                    currentSessionName = name;
+
+                    //save cookie
+                    document.cookie = "loginName=" + encodeURIComponent(name) + "; expires=" + new Date(new Date().getTime() + 100 * 24 * 60 * 60 * 1000).toUTCString(); //100 days
+
+                    $("#generic-login-page").hide();
+                    $('#generic-name-header').show();
+                    $("#generic-waiting-page").show();
+                }
+            }
+
+            function StringValidator(str) {
+                //force alpha numeric
+                return str.replace(/[^A-Za-z0-9]/g, '');
+            }
+
+            function TriviaRacetrackAnsSubmit(index) {
+                $("#trivia-racetrack-answer-voting").hide();
+                $("#generic-waiting-page").show();
+
+                var letter = "";
+                switch (index) {
+                    case 0:
+                        letter = "You selected option <b>A</b>";
+                        break;
+                    case 1:
+                        letter = "You selected option <b>B</b>";
+                        break;
+                    case 2:
+                        letter = "You selected option <b>C</b>";
+                        break;
+                    case 3:
+                        letter = "You selected option <b>D</b>";
+                        break;
+                    default:
+                        break;
+                }
+                $("#TriviaRacetrack-selected-answer-text").html(letter)
+
+                socket.send("phone_05_send_answer;" + currentSessionName + ";" + index.toString());
+            }
+
+            function ResetToWaitingScreen() {
+                $("#trivia-racetrack-answer-voting").hide();
+                $("#generic-waiting-page").show();
+            }
+
+            function ReturnTriviaRacetrackLoserEmoji(index) {
+                switch (index) {
+                    case "0":
+                        return "🎈";
+                    case "1":
+                        return "🎁";
+                    case "2":
+                        return "🛴";
+                    case "3":
+                        return "🏍️";
+                    case "4":
+                        return "💰";
+                    case "5":
+                        return "🛹";
+                    case "6":
+                        return "🧦";
+                    case "7":
+                        return "🚀";
+                    case "8":
+                        return "🍝";
+                    case "9":
+                        return "🤡";
+                    case "10":
+                        return "🧪";
+                    case "11":
+                        return "🧲";
+                    case "12":
+                        return "✂️";
+
+                    default:
+                        return "";
+                }
+            }
+
+            function CountCharactersLogin(max) {
+                var text = StringValidator(($("#login-name").val().slice(0, max)));
+                $("#login-char-counter").html(text.length + "/" + max.toString());
+                $("#login-name").val(text);
+            }
+
+            loadFromCookie();
+            CountCharactersLogin(10);
+            function loadFromCookie() {
+                var cookieString = document.cookie;
+                var cookies = cookieString.split(';');
+
+                // Loop through the cookies to find the one with the text field value
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.startsWith("loginName=")) {
+                        var textFieldValue = decodeURIComponent(cookie.substring("loginName=".length));
+
+                        $("#login-name").val(textFieldValue);
+                        break;
+                    }
+                }
+            }
+
+            function TicketGetFontSizeClass(length) {
+                if (length <= 12) {
+                    return 'trivia-font-char12';
+                } else if (length <= 25) {
+                    return 'trivia-font-char25';
+                } else if (length <= 50) {
+                    return 'trivia-font-char50';
+                } else if (length <= 75) {
+                    return 'trivia-font-char75';
+                } else if (length <= 100) {
+                    return 'trivia-font-char100';
+                } else if (length <= 150) {
+                    return 'trivia-font-char150';
+                }
+                else {
+                    return 'trivia-font-char150Plus'
+                }
+            }
+
+        </script>
+    </div>
+
+
+    <footer>Created by<br><b>Distracted Coder</b></footer>
+
+</body>
+
+</html>
