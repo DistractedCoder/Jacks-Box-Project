@@ -16,7 +16,7 @@ A setup guide can be found at the end of **this video.** It’s not as difficult
 6. Download the latest release of **Piper** (free text-to-speech engine)
     1. <https://github.com/rhasspy/piper/releases>
     2. Click the download option for **piper_windows_amd64.zip**
-7. Extract the contents of the ZIP file to `{Project}\\Jacks-Box-Project-main\\Jacksbox-Python-Data`
+7. Extract the contents of the ZIP file to `{Project}\Jacks-Box-Project-main\Jacksbox-Python-Data`
     1. Folder should now include these folders: game_data, piper, static, templates
 8. Open the new **piper folder** and create a new folder called: **voices**
     1. Folder should now include these folders: espeak-ng-data, pkgconfig, voices
@@ -30,7 +30,7 @@ A setup guide can be found at the end of **this video.** It’s not as difficult
 
 If you happen to be streaming this game, **it is very important to hide your IP Address**.
 
-1. Navigate to `{Project}\\Jacks-Box-Project-main\\Jackbox-Game-Data\\Jackbox Game_Data\\StreamingAssets`
+1. Navigate to `{Project}\Jacks-Box-Project-main\Jackbox-Game-Data\Jackbox Game_Data\StreamingAssets`
 2. Open **Settings.json** (these settings are universal for server and game data)
     1. **Server Settings:**
         1. If the game fails to automatically identify your IP address, tweak these lines:
@@ -49,13 +49,13 @@ If you happen to be streaming this game, **it is very important to hide your IP 
 # Running the Game
 
 1. Open the Start Menu and search for **Spyder** (Spyder looks very complicated but you don’t need to understand anything about the program)
-    1. From Spyder Editor, open `{Project}\\Jacks-Box-Project-main\\Jacksbox-Python-Data\\server-TriviaRacetrack.py`
+    1. From Spyder Editor, open `{Project}\Jacks-Box-Project-main\Jacksbox-Python-Data\server-TriviaRacetrack.py`
     2. Click the green run script button at the top of Spyder
         1. If you get a popup, just click Ok or Run
         2. Bottom left corner of Spyder should confirm that the server started
     3. Minimize the server but keep it running
         1. If Sypder ever asks about updating, skip the update and disable automatic update checking
-2. Start the game located at `{Project}\\Jacks-Box-Project-main\\Jackbox-Game-Data\\Jackbox Game.exe`
+2. Start the game located at `{Project}\Jacks-Box-Project-main\Jackbox-Game-Data\Jackbox Game.exe`
 3. Play the game! The game will display the link to connect to on the phones (unless hidden).
 
 # Known Issues/Details
