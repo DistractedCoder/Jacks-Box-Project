@@ -67,3 +67,5 @@ If you happen to be streaming this game, **it is very important to hide your IP 
 5. If you are skipped for a question, sorry but you should get the next question once it is ready.
 6. The game will very rarely crash, if this happens, there is a button in the bottom right to skip to the results screen.
     **1. If the server crashes, you must close the server and restart. You do not have to close the game, simply back out to the title screen.**
+
+Disclaimer: This is not a hack or mod of any Party Pack created by Jackbox Games. All code is original. 
