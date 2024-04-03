@@ -1,6 +1,6 @@
 # Initial Setup (New Computer)
 
-A setup guide can be found at the end of **this video.** It’s not as difficult as it looks.
+A setup guide can be found at the end of [**this video.**](https://youtu.be/e804a0amv50) It’s not as difficult as it looks.
 
 1. Download **Anaconda** Python Distribution
     1. <https://www.anaconda.com/download>
