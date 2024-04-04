@@ -1,6 +1,7 @@
 # Initial Setup (New Computer)
 
 A setup guide can be found at the end of [**this video.**](https://youtu.be/e804a0amv50) It’s not as difficult as it looks.
+Screenshots can be found [**here**](https://distractedcoder.itch.io/custom-jackbox-game-trivia-racetrack).
 
 1. Download **Anaconda** Python Distribution
     1. <https://www.anaconda.com/download>
