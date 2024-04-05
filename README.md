@@ -61,7 +61,7 @@ If you happen to be streaming this game, **it is very important to hide your IP 
 
 # Known Issues/Details
 
-1. Everyone must be on the same WiFi network, including the computer hosting the server/game. Keep in mind that if your router broadcasts both a 2.4 GHz and 5 GHz connection, those might be considered separate networks.
+1. Everyone must be on the same WiFi network, including the computer hosting the server/game. Keep in mind that if your router broadcasts both a 2.4 GHz and 5 GHz connection, those are considered separate networks.
 2. This is a local server only. There is no access available from the internet.
 3. If the announcer fails to read a question, there is a 15 second failsafe in place. This is rare but will not result in the game crashing.
 4. Make sure you keep the browser window open the entire time on your phone. Leaving the game in the background may result in missing a question or desyncing.
